@@ -5,7 +5,7 @@ const config = require("./config");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost/exercise", (err) => {
+mongoose.connect(config.db, (err) => {
     if (err) throw err;
     console.log("Connected to the database! :)");
 });
