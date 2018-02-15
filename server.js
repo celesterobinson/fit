@@ -13,6 +13,7 @@ mongoose.connect(config.db, (err) => {
 //middleware
 app.use(bodyParser.json());
 app.use("/exercise", require("./routes/exercise"));
+app.use("/workout", require("./routes/workout"));
 
 app.listen(config.port, () => {
     console.log(`Listening on port ${config.port}`);
