@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #373944;
+    color: #e7853c;
+    height: 67px;
+}
+
+.links {
+    display: flex;
+}
+.links > a {
+    color: #e7853c;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.links > a:hover {
+    color: white;
+}
