@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const exerciseUrl = '/exercises/';
+const exerciseUrl = '/exercise/';
 
 export const getExercise = () => {
     return dispatch => {
@@ -17,7 +17,9 @@ export const getExercise = () => {
             })
     }
 }
+
 export const addExercise = (inputs) => {
+    console.log("got to here");
     return dispatch => {     
         axios.post(exerciseUrl, inputs)
             .then(response => {

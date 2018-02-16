@@ -31,7 +31,7 @@ class NewExerciseForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        addExercise(this.state.inputs);
+        this.props.addExercise(this.state.inputs);
     }
 
     render() {
