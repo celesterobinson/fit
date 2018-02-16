@@ -1,9 +1,12 @@
 import React from 'react';
 
 function Exercise(props) {
+    let { name, category, instructions } = props
     return (
         <div>
-            individual exercise display
+            <h1>{name}</h1>
+            <h3>{category}</h3>
+            <p>{instructions}</p>
         </div>
     )
 }

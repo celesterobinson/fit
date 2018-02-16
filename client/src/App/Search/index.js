@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 // import { Modal } from "react-bootstrap";
 
-import SearchForm from "../shared/SearchForm";
+import SearchForm from "./SearchForm";
 import NewExerciseForm from "../shared/NewExerciseForm";
 import ExerciseList from "./ExerciseList/index";
 import "../styles/Modals.css";
+import { getExercise } from "../redux/exercises"
+import { connect } from "react-redux";
 
 class Search extends Component {
+    componentDidMount() {
+            this.props.getExercise();       
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -63,4 +68,4 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default connect(null, {getExercise})(Search);

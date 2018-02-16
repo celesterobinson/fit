@@ -7,7 +7,7 @@ export const getExercise = () => {
         axios.get(exerciseUrl)
             .then(response => {
                 let { data } = response;
-                console.log(data);
+                console.log(data)
                 dispatch({
                     type: 'GET_EXERCISE',
                     data
@@ -66,7 +66,7 @@ const exerciseReducer = (prevState = { loading: true, data: [] }, action) => {
         case "GET_EXERCISE":
             return {
                 ...prevState,
-                loading: true
+                loading: false
             }
         case "ADD_EXERCISE":
             return {
