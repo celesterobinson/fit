@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ExerciseModel = new Schema({
+const Exercise = new Schema({
     name: String,
     category: String,
     instructions: String
 });
 
-module.exports = mongoose.model("exercises", ExerciseModel);
+module.exports = mongoose.model("exercises", Exercise);

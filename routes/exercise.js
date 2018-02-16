@@ -12,6 +12,7 @@ exerciseRoute.get("/", (req, res) => {
 
 //POST
 exerciseRoute.post("/", (req, res) => {
+    console.log("mongoose");
     const newExercise = new Exercise(req.body);
     newExercise.save((err, savedExercise) => {
         if (err) return res.status(500).send(err);

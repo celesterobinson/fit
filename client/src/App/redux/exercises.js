@@ -18,10 +18,11 @@ export const getExercise = () => {
     }
 }
 export const addExercise = (inputs) => {
-    return dispatch => {
+    return dispatch => {     
         axios.post(exerciseUrl, inputs)
             .then(response => {
                 let { data } = response;
+                console.log(data);
                 dispatch({
                     type: 'ADD_EXERCISE',
                     data

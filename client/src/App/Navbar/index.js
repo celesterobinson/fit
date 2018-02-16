@@ -9,6 +9,7 @@ function Navbar(props) {
                 <h1>Fit</h1>
             </div>
             <div className="links">
+                <Link to="/">Home</Link>
                 <Link to="/profile">Profile</Link>
                 <Link to="/workouts">Workouts</Link>
             </div>
