@@ -10,7 +10,6 @@ function Navbar(props) {
             </div>
             <div className="links">
                 <Link to="/">Home</Link>
-                <Link to="/profile">Profile</Link>
                 <Link to="/workouts">Workouts</Link>
             </div>
             <button>Logout</button>

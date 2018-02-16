@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import SearchForm from "../shared/SearchForm";
 import NewExerciseForm from "../shared/NewExerciseForm";
 import ExerciseList from "./ExerciseList/index";
-import "../styles/Modals.css";
+import "../styles/Search.css";
 
 class Search extends Component {
     constructor(props) {
@@ -51,10 +51,15 @@ class Search extends Component {
             )
         } else {
             return (
-                <div>
-                    <SearchForm />
-                    <ExerciseList />
-                    <button onClick={this.showCreateForm}>Create New Exercise</button>
+                <div className="search">
+                    <div className="sidebar">
+                        <SearchForm />
+                        <ExerciseList />
+                        <button onClick={this.showCreateForm}>Create New Exercise</button>
+                    </div>
+                    <div className="new-workout">
+                        
+                    </div>
                 </div>
             )
         }
