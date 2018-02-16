@@ -35,7 +35,7 @@ export default class SearchForm extends Component {
     render() {
         let { name, category } = this.state.inputs;
         return (
-            <div>
+            <div className="search-form">
                 <h4>Find Exercise</h4>
                 <form onSubmit={this.handleSubmit}>
                     <div className="name-search">

@@ -66,6 +66,7 @@ const exerciseReducer = (prevState = { loading: true, data: [] }, action) => {
         case "GET_EXERCISE":
             return {
                 ...prevState,
+                data: action.data,
                 loading: false
             }
         case "ADD_EXERCISE":
