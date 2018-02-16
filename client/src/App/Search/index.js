@@ -46,6 +46,7 @@ class Search extends Component {
                         </Modal.Dialog>
                     </Modal> */}
                     <NewExerciseForm />
+                    <button onClick={this.hideCreateForm}>Close</button>
                 </div>
             )
         } else {
