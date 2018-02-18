@@ -21,11 +21,6 @@
     font-family: 'Exo', sans-serif;
 }
 
-.title > h1 {
-    line-height: 67px;
-    margin-left: 10px;
-}
-
 .links > a {
     color: #e7853c;
     padding: 10px;
