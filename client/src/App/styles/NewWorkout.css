@@ -1,0 +1,16 @@
+.new-workout-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.new-workout {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 75%;
+    height: 75%;
+    font-family: 'Exo', sans-serif;
+    display: flex;
+    justify-content: center;
+}

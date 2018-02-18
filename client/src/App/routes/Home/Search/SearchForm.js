@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { populateFilter } from "../redux/exercises";
+import { populateFilter } from "../../../redux/exercises";
 import { connect } from 'react-redux';
-import "../styles/SearchForm.css";
+import "../../../styles/SearchForm.css";
 
 
 class SearchForm extends Component {
@@ -32,20 +32,16 @@ class SearchForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.populateFilter(this.state.inputs);
-        
+
     }
 
     render() {
         let { name, category } = this.state.inputs;
         return (
-            <div className="search-form">
-                <h4>Find Exercise</h4>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="name-search">
-                        Name
-                        <input onChange={this.handleChange} value={name} name="name" type="text" placeholder="ex. Plank" />
-                    </div>
-                    <div className="category-dropdown">
+            <div className="search-form-wrapper">
+                <h2>Find Exercise</h2>
+                <form className="search-form"onSubmit={this.handleSubmit}>
+                <div className="category-dropdown">
                         Category <select onChange={this.handleChange} value={category} name="category">
                             <option value="All">All</option>
                             <option value="Abs">Abs</option>
@@ -55,6 +51,7 @@ class SearchForm extends Component {
                             <option value="Legs">Legs</option>
                         </select>
                     </div>
+                    <input onChange={this.handleChange} value={name} name="name" type="text" placeholder="Exercise Name" />
                     <button >Search</button>
                 </form>
             </div>

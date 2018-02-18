@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { login } from "../redux/auth";
-import "../styles/Login.css";
+import { login } from "../../redux/auth";
+import "../../styles/Login.css";
 
 class LoginForm extends Component {
     constructor(props) {

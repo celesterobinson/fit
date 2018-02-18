@@ -4,11 +4,11 @@ import { connect } from "react-redux"
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Home from "./pages/Home";
-import Workouts from "./pages/Workouts";
-import Signup from "./Signup";
-import Login from "./Login";
-import ProtectedRoute from "./ProtectedRoute";
+import Home from "./routes/Home";
+import Workouts from "./routes/Workouts";
+import Signup from "./routes/Signup";
+import Login from "./routes/Login";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 import "./styles/App.css";
 

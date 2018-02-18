@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../../styles/Exercise.css";
+import "../../../../../styles/Exercise.css";
 
 function Exercise(props) {
     let { name, category } = props

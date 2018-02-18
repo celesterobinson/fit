@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Exercise from "./Exercise";
 import { connect } from 'react-redux';
-import { getExercise } from '../../redux/exercises';
-import "../../styles/ExerciseList.css";
+import { getExercise } from '../../../../redux/exercises';
+import "../../../../styles/ExerciseList.css";
 
 class ExerciseList extends Component {
     

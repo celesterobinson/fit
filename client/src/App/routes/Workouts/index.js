@@ -1,7 +1,7 @@
-import React from "react";  
-import {connect} from "react-redux";
+import React from "react";
+import { connect } from "react-redux";
 
-function Workouts(props) {  
+function Workouts(props) {
     return (
         <div>
             <h2>Welcome, <i>@{props.username}</i></h2>
@@ -9,7 +9,7 @@ function Workouts(props) {
     )
 }
 
-const mapStateToProps = (state) => {  
+const mapStateToProps = (state) => {
     return state.user;
 }
 
