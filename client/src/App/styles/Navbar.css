@@ -8,16 +8,29 @@
     height: 67px;
 }
 
-.links {
+.nav-link-wrapper {
     display: flex;
 }
+
+.title {
+    font-family: 'Exo', sans-serif;
+}
+
 .links > a {
     color: #e7853c;
     padding: 10px;
     text-decoration: none;
     transition: color 1s;
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
 
 .links > a:hover {
     color: white;
+}
+
+.nav-link-wrapper > div > button {
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 15px;
 }

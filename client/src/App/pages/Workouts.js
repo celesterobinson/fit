@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";  
+import {connect} from "react-redux";
 
-function Workouts(props) {
+function Workouts(props) {  
     return (
         <div>
-            Workouts
+            <h2>Welcome, <i>@{props.username}</i></h2>
         </div>
     )
 }
 
-export default Workouts;
+const mapStateToProps = (state) => {  
+    return state.user;
+}
+
+export default connect(mapStateToProps, {})(Workouts);

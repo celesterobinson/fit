@@ -1,10 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import exercises from "./exercises";
+import user from "./auth";
 
 const rootReducer = (
     combineReducers({
-        exercises
+        exercises,
+        user
     })
 );
 

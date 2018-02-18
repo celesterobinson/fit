@@ -1,0 +1,32 @@
+.signup-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url("./images/deadlift.jpg"); */
+    /* background-size: cover; */
+}
+
+.signup-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    width: 200px;
+    border: 5px solid #e7853c;
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+    top: -100px;
+    background-color: #373944;
+}
+
+.signup-form > input, .signup-form > button {
+    font-family: 'Encode Sans Expanded', sans-serif;    
+    margin: 10px auto;
+}
+
+.signup-form > h1 {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    margin: 5px auto;
+}
