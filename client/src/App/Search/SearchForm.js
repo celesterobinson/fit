@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import { populateFilter } from "../redux/exercises";
+import { connect } from 'react-redux';
 import "../styles/SearchForm.css";
 
-export default class SearchForm extends Component {
+
+class SearchForm extends Component {
     constructor(props) {
         super(props);
-        let { name, category } = props
         this.state = {
             inputs: {
-                name: name || "",
-                category: category || "Abs"
+                name: "",
+                category: "All"
             }
         }
         this.handleChange = this.handleChange.bind(this);
@@ -29,7 +31,8 @@ export default class SearchForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        alert("SearchForm Submit worked");
+        this.props.populateFilter(this.state.inputs);
+        
     }
 
     render() {
@@ -44,6 +47,7 @@ export default class SearchForm extends Component {
                     </div>
                     <div className="category-dropdown">
                         Category <select onChange={this.handleChange} value={category} name="category">
+                            <option value="All">All</option>
                             <option value="Abs">Abs</option>
                             <option value="Arms">Arms</option>
                             <option value="Back">Back</option>
@@ -51,9 +55,12 @@ export default class SearchForm extends Component {
                             <option value="Legs">Legs</option>
                         </select>
                     </div>
-                    <button>Search</button>
+                    <button >Search</button>
                 </form>
             </div>
         )
     }
 }
+
+
+export default connect(null, { populateFilter })(SearchForm)

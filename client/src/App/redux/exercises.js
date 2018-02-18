@@ -7,7 +7,7 @@ export const getExercise = () => {
         axios.get(exerciseUrl)
             .then(response => {
                 let { data } = response;
-                console.log(data)
+                // console.log(data)
                 dispatch({
                     type: 'GET_EXERCISE',
                     data
@@ -20,7 +20,7 @@ export const getExercise = () => {
 }
 
 export const addExercise = (inputs) => {
-    return dispatch => {     
+    return dispatch => {
         axios.post(exerciseUrl, inputs)
             .then(response => {
                 let { data } = response;
@@ -60,8 +60,18 @@ export const deleteExercise = (id) => {
             })
     }
 }
+export const populateFilter = (search) => {
+    return dispatch => {
+        dispatch({
+            type: 'SEARCH_FILTER',
+            search
+        })
+    }
+}
+//populateFilter function
+//this is an action creator that dispatches the inputs object from the search form component
 
-const exerciseReducer = (prevState = { loading: true, data: [] }, action) => {
+const exerciseReducer = (prevState = { loading: true, data: [], filter: { name: "", category: "All" } }, action) => {
     switch (action.type) {
         case "GET_EXERCISE":
             return {
@@ -92,6 +102,13 @@ const exerciseReducer = (prevState = { loading: true, data: [] }, action) => {
                     return exercise._id !== action.id
                 })
             }
+        case "SEARCH_FILTER":
+            return {
+                ...prevState,
+                filter: action.search
+            }
+        // handle a populate filter case
+        // return a new state containing the filter object sent from the action
         default:
             return prevState
     }
