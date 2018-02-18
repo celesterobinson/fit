@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../redux/auth";
+import weight from "../styles/images/weight.png";
 import "../styles/Navbar.css";
 
 class Navbar extends Component {
@@ -10,8 +11,10 @@ class Navbar extends Component {
         return (
             <div className="nav">
                 <div className="title">
+                    <img src={weight} alt="" />
                     <h1>Fit</h1>
                 </div>
+                
                 <div className="nav-link-wrapper">
                     {isAuthenticated ? null : <div className="links"><Link to="/signup">Sign Up</Link></div>}
                     {isAuthenticated ? null : <div className="links"><Link to="/">Login</Link></div>}
