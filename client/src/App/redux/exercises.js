@@ -1,9 +1,11 @@
 import axios from 'axios';
-let exerciseAxios = axios.create();
+// let exerciseAxios = axios.create();
 
-exerciseAxios.interceptors.request.use((config)=>{
+axios.interceptors.request.use((config)=>{
     const token = localStorage.getItem("token");
-    config.headers.Authorization = `Bearer ${token}`;
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
 })
 

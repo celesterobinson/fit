@@ -5,7 +5,11 @@ const expressJwt = require("express-jwt");
 
 //GET
 exerciseRoute.get("/", (req, res) => {
-    Exercise.find({user: req.user._id}, (err, exercises) => {
+    const query = {};
+    if (req.query.creator === "me") {
+        query.user = req.user._id;
+    }
+    Exercise.find(query, (err, exercises) => {
         if (err) return res.status(500).send(err);
         return res.send(exercises);
     });

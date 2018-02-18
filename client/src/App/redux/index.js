@@ -16,6 +16,14 @@ let store = createStore(
     applyMiddleware(thunk)
 );
 
+const token = localStorage.token;
+const userInfo = localStorage.user;
+if (userInfo && token) {
+    store.dispatch({
+        type: "AUTHENTICATE", user: userInfo
+    })
+}
+
 store.subscribe(() => {
     // console.log(store.getState());
 })

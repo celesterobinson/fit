@@ -14,7 +14,7 @@ import "./styles/App.css";
 
 class App extends Component {
     render() {
-        const isAuthenticated = this.props.isAuthenticated;
+        const isAuthenticated = this.props.user.isAuthenticated;
         return (
             <div>
                 <Navbar />
