@@ -8,8 +8,6 @@ class ExerciseList extends Component {
 
     render() {
         let { data, loading} = this.props;
-        let { name, category } = this.props;
-        console.log(this.props.data);
         const exercises = data
             // .filter(exercise => {
             //     return exercise.name.tolowercase().includes();  

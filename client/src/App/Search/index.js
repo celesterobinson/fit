@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import { Modal } from "react-bootstrap";
-
 import SearchForm from "./SearchForm";
 import NewExerciseForm from "../shared/NewExerciseForm";
 import ExerciseList from "./ExerciseList/index";
-import "../styles/Modals.css";
 import { getExercise } from "../redux/exercises"
 import { connect } from "react-redux";
+
+import "../styles/Search.css";
 
 class Search extends Component {
     componentDidMount() {

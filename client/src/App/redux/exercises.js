@@ -1,6 +1,13 @@
 import axios from 'axios';
+let exerciseAxios = axios.create();
 
-const exerciseUrl = '/exercise/';
+exerciseAxios.interceptors.request.use((config)=>{
+    const token = localStorage.getItem("token");
+    config.headers.Authorization = `Bearer ${token}`;
+    return config;
+})
+
+const exerciseUrl = '/api/exercise/';
 
 export const getExercise = () => {
     return dispatch => {
@@ -20,7 +27,7 @@ export const getExercise = () => {
 }
 
 export const addExercise = (inputs) => {
-    return dispatch => {     
+    return dispatch => {
         axios.post(exerciseUrl, inputs)
             .then(response => {
                 let { data } = response;
