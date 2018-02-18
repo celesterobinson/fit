@@ -3,7 +3,7 @@ import SignupForm from "./SignupForm";
 
 function Signup(props) {
     return (
-        <div>
+        <div className="background">
             <SignupForm />
         </div>
     )

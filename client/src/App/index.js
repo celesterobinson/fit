@@ -16,22 +16,24 @@ class App extends Component {
     render() {
         const isAuthenticated = this.props.user.isAuthenticated;
         return (
-            <div>
+            <div className="app-wrapper">
                 <Navbar />
-                <Switch>
-                    <Route exact path="/" render={(props)=>{
-                        return isAuthenticated ?
-                        <Redirect to="/workouts" /> :
-                        <Login {...props} />
-                    }}/>
-                    <Route path="/signup" render={(props)=>{
-                        return isAuthenticated ?
-                        <Redirect to="/home" /> :
-                        <Signup {...props} />
-                    }}/>
-                    <ProtectedRoute path="/workouts" component={Workouts} />
-                    <ProtectedRoute path="/home" component={Home} />
-                </Switch>
+                <div>
+                    <Switch className="main">
+                        <Route exact path="/" render={(props) => {
+                            return isAuthenticated ?
+                                <Redirect to="/workouts" /> :
+                                <Login {...props} />
+                        }} />
+                        <Route path="/signup" render={(props) => {
+                            return isAuthenticated ?
+                                <Redirect to="/home" /> :
+                                <Signup {...props} />
+                        }} />
+                        <ProtectedRoute path="/workouts" component={Workouts} />
+                        <ProtectedRoute path="/home" component={Home} />
+                    </Switch>
+                </div>
                 <Footer />
             </div>
         )

@@ -64,7 +64,7 @@ class Search extends Component {
                         <button onClick={this.showCreateForm}>Create New Exercise</button>
                     </div>
                     <div className="new-workout">
-                        
+                        WorkoutList
                     </div>
                 </div>
             )

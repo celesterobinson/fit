@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Exercise from "./Exercise";
 import { connect } from 'react-redux';
 import { getExercise } from '../../redux/exercises';
+import "../../styles/ExerciseList.css";
 
 class ExerciseList extends Component {
     
@@ -23,7 +24,7 @@ class ExerciseList extends Component {
             })
         //    console.log(exercises)            
         return (
-            !loading? <div>{exercises}</div>: null
+            !loading? <div className="ex-list-wrapper"><div className="exercise-list">{exercises}</div></div>: null
         )
     }
 }

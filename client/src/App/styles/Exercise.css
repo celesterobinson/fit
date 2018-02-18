@@ -1,0 +1,14 @@
+.exercise {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    color: #373944;
+}
+
+.exercise > button {
+    height: 20px;
+}

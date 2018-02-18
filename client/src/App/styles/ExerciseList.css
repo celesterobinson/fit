@@ -1,0 +1,12 @@
+.ex-list-wrapper {
+    padding: 5px 20px;
+    box-shadow: inset 0 0 15px #000000;
+    background-color: #e7853c;
+    margin: 25px 0;
+}
+
+.exercise-list {
+    height: 500px;
+    overflow: scroll;
+    font-family: 'Encode Sans Expanded', sans-serif;    
+}

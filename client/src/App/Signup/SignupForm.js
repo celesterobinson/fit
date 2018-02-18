@@ -46,15 +46,13 @@ class SignupForm extends Component {
     render() {
         let { username, password } = this.state.inputs;
         return (
-            <div className="background-layer">
-                <div className="signup-form-wrapper">
-                    <form onSubmit={this.handleSubmit} className="signup-form">
-                        <h1>Sign Up</h1>
-                        <input onChange={this.handleChange} name="username" value={username} placeholder="Username" type="text" />
-                        <input onChange={this.handleChange} name="password" value={password} placeholder="password" type="password" />
-                        <button>Submit</button>
-                    </form>
-                </div>
+            <div className="signup-form-wrapper">
+                <form onSubmit={this.handleSubmit} className="signup-form">
+                    <h1>Sign Up</h1>
+                    <input onChange={this.handleChange} name="username" value={username} placeholder="Username" type="text" />
+                    <input onChange={this.handleChange} name="password" value={password} placeholder="password" type="password" />
+                    <button>Submit</button>
+                </form>
             </div>
         )
     }
