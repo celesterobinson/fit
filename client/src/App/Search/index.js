@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import SearchForm from "./SearchForm";
 import NewExerciseForm from "../shared/NewExerciseForm";
 import ExerciseList from "./ExerciseList/index";
-import "../styles/Modals.css";
+// import "../styles/Modals.css";
 import { getExercise } from "../redux/exercises"
 import { connect } from "react-redux";
 
