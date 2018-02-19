@@ -28,9 +28,20 @@ class Search extends Component {
     }
 
     render() {
-        if (this.state.isCreating) {
-            return (
-                <div className="create-form">
+        
+        return (
+            <div className="search">
+                <div className="sidebar">
+                    <SearchForm />
+                    <ExerciseList />
+                    <button onClick={this.toggleCreateForm}>Create New Exercise</button>
+                </div>
+                <div className="new-workout-wrapper background">
+                    <div className="new-workout-layer">
+                        <NewWorkout />
+                    </div>
+                </div>
+                {this.state.isCreating ? <div className="create-form">
                     <Modal className="create-backdrop-style" show={this.state.isCreating} animation={true}>
                         <div className="create-modal">
                             <Modal.Dialog>
@@ -48,21 +59,8 @@ class Search extends Component {
                             </Modal.Dialog>
                         </div>
                     </Modal>
-                </div>
-            )
-        }
-        return (
-            <div className="search">
-                <div className="sidebar">
-                    <SearchForm />
-                    <ExerciseList />
-                    <button onClick={this.toggleCreateForm}>Create New Exercise</button>
-                </div>
-                <div className="new-workout-wrapper background">
-                    <div className="new-workout-layer">
-                        <NewWorkout />
-                    </div>
-                </div>
+                </div> :
+                    null}
             </div>
         )
     }

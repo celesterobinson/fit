@@ -10,7 +10,7 @@ class ExerciseList extends Component {
     render() {
         let { data, loading, filter} = this.props;
         // let { name, category } = this.props;
-        // console.log(data);
+        console.log(data);
         const exercises = data
             .filter(exercise => {
                 if(!exercise.name.toLowerCase().includes(filter.name)) return false;

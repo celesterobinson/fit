@@ -90,11 +90,13 @@ const exerciseReducer = (prevState = { loading: true, data: [], filter: { name: 
             }
         case "ADD_EXERCISE":
             return {
+                ...prevState,
                 loading: false,
                 data: [...prevState.data, action.data]
             }
         case "EDIT_EXERCISE":
             return {
+                ...prevState,
                 loading: false,
                 data: prevState.data.map((exercise) => {
                     if (exercise._id === action.id) {
