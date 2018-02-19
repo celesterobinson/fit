@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import Home from "./routes/Home";
 import Workouts from "./routes/Workouts";
 import Signup from "./routes/Signup";
-import Login from "./routes/Login";
+import Login from "./routes/Login/LoginForm";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
 import "./styles/App.css";
@@ -18,8 +18,8 @@ class App extends Component {
         return (
             <div className="app-wrapper">
                 <Navbar />
-                <div>
-                    <Switch className="main">
+                <div className="main">
+                    <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
                                 <Redirect to="/workouts" /> :

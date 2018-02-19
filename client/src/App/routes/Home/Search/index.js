@@ -1,36 +1,29 @@
 import React, { Component } from 'react';
-// import { Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import SearchForm from "./SearchForm";
 import NewExerciseForm from "../../../shared/NewExerciseForm";
 import ExerciseList from "./ExerciseList";
 import NewWorkout from "./NewWorkout";
-// import "../styles/Modals.css";
+import "../../../styles/Search.css";
 import { getExercise } from "../../../redux/exercises"
 import { connect } from "react-redux";
 
 import "../../../styles/Search.css";
 
 class Search extends Component {
-    componentDidMount() {
-            this.props.getExercise();       
-    }
     constructor(props) {
         super(props);
         this.state = {
             isCreating: false
         }
-        this.showCreateForm = this.showCreateForm.bind(this);
-        this.hideCreateForm = this.hideCreateForm.bind(this);
+        this.toggleCreateForm = this.toggleCreateForm.bind(this);
     }
-    showCreateForm() {
-        this.setState({
-            isCreating: true
-        })
+    componentDidMount() {
+        this.props.getExercise();
     }
-
-    hideCreateForm() {
+    toggleCreateForm() {
         this.setState({
-            isCreating: false
+            isCreating: !this.state.isCreating
         })
     }
 
@@ -38,41 +31,41 @@ class Search extends Component {
         if (this.state.isCreating) {
             return (
                 <div className="create-form">
-                    {/* <Modal className="modal-style" show={this.state.showCreateForm} animation={true}>
-                        <Modal.Dialog>
-                            <Modal.Header>
-                                <Modal.Title>Modal title</Modal.Title>
-                            </Modal.Header>
+                    <Modal className="create-backdrop-style" show={this.state.isCreating} animation={true}>
+                        <div className="create-modal">
+                            <Modal.Dialog>
+                                <Modal.Header >
+                                    <Modal.Title>Create New Title</Modal.Title>
+                                </Modal.Header>
 
-                            <Modal.Body>One fine body...</Modal.Body>
+                                <Modal.Body>
+                                    <NewExerciseForm />
+                                </Modal.Body>
 
-                            <Modal.Footer>
-                                <button>Close</button>
-                                <button bsStyle="primary">Save changes</button>
-                            </Modal.Footer>
-                        </Modal.Dialog>
-                    </Modal> */}
-                    <NewExerciseForm />
-                    <button onClick={this.hideCreateForm}>Close</button>
-                </div>
-            )
-        } else {
-            return (
-                <div className="search">
-                    <div className="sidebar">
-                        <SearchForm />
-                        <ExerciseList />
-                        <button onClick={this.showCreateForm}>Create New Exercise</button>
-                    </div>
-                    <div className="new-workout-wrapper">
-                        <NewWorkout />
-                    </div>
+                                <Modal.Footer>
+                                    <button onClick={this.toggleCreateForm}>Close</button>
+                                </Modal.Footer>
+                            </Modal.Dialog>
+                        </div>
+                    </Modal>
                 </div>
             )
         }
-
-
+        return (
+            <div className="search">
+                <div className="sidebar">
+                    <SearchForm />
+                    <ExerciseList />
+                    <button onClick={this.toggleCreateForm}>Create New Exercise</button>
+                </div>
+                <div className="new-workout-wrapper background">
+                    <div className="new-workout-layer">
+                        <NewWorkout />
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
 
-export default connect(null, {getExercise})(Search);
+export default connect(null, { getExercise })(Search);

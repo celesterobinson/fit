@@ -18,7 +18,7 @@ exerciseRoute.get("/", (req, res) => {
 //POST
 exerciseRoute.post("/", (req, res) => {
     const newExercise = new Exercise(req.body);
-    todo.user = req.user._id;
+    newExercise.user = req.user._id; //this line is not working
     newExercise.save((err, savedExercise) => {
         if (err) return res.status(500).send(err);
         return res.send(savedExercise);
