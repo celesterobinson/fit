@@ -20,7 +20,7 @@ form > button {
 .search-form-wrapper {
     display: flex;
     align-items: center;
-    width: 100%;
+    grid-area: s;
 }
 
 .search-form-wrapper > h2 {

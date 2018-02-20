@@ -3,10 +3,13 @@
     box-shadow: inset 0 0 15px #000000;
     background-color: #e7853c;
     margin: 25px 0;
+    grid-area: e;
+    height: 50vh;
+    overflow: scroll;
 }
 
 .exercise-list {
-    height: 425px;
-    overflow: scroll;
+    height: 100%;
+    /* overflow: scroll; */
     font-family: 'Encode Sans Expanded', sans-serif;    
 }

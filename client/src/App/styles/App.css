@@ -4,15 +4,15 @@
 }
 
 html, body {
-    height: 100vh;
-    overflow: hidden;
+    /* height: 100vh; */
+    /* overflow: hidden; */
 }
 
 .app-wrapper {
-    height: 600px;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: .15fr .8fr .05fr ;
     grid-template-areas: 
         "n"
         "m"
@@ -20,12 +20,13 @@ html, body {
 }
 
 .nav {
+    /* height: 300px; */
     grid-area: n;
 }
 
 .main {
     grid-area: m;
-    height: 100vh;
+    height: 100%;
 }
 
 .background {
@@ -37,10 +38,14 @@ html, body {
 
 .footer {
     grid-area: f;
+    height: 100%;
+    /* width: 100%; */
     background-color: #e7853c;
     color: #373944;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Exo', sans-serif;
+    /* position: fixed;
+    bottom: 0; */
 }

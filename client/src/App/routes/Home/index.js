@@ -4,9 +4,7 @@ import "../../styles/Home.css";
 
 function Home(props) {
     return (
-            <div className="home-wrapper">
-                <Search />
-            </div>
+        <Search />
     )
 }
 
