@@ -26,27 +26,20 @@
 
 .sidebar {
     grid-area: side;
-    /* height: 100vh; */
     background-color: #373944;
     border-right: 10px solid #E7853C;
     border-top: 1px solid #e7853c;
     color: white;
     padding: 25px;
-    /* display: grid; */
-    /* grid-template-rows: .25fr .55fr .20fr; */
-    /* grid-template-areas: "s" "e" "b"; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-/* .search-form {
-    grid-area: s;
-} */
-
-/* .exercise-list {
-    grid-area: e;
-} */
-
-.sidebar>button {
+.sidebar > button {
     grid-area: b;
+    width: 75%;
 }
 
 .new-workout {

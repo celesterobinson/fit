@@ -38,7 +38,7 @@ class NewWorkout extends Component {
             <div className="new-workout" >
                 <form>
                     <input onChange={this.handleChange} value={name} type="text" placeholder="New Workout Name" />
-                    <NewWorkoutExercises exercises={this.props.workouts.currentWorkout.exercises} />
+                    <NewWorkoutExercises className="new-workout-exercise-list" exercises={this.props.workouts.currentWorkout.exercises} />
                     <button onClick={this.handleSubmit}>Save Workout</button>
                 </form>
             </div>

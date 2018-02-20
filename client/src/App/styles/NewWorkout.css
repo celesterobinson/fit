@@ -24,4 +24,55 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.new-workout > form > input {
+    width: 50%;
+    height: 40px;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.new-workout > form > button {
+    margin: 25px 0;
+}
+
+.new-workout-exercise-list {
+    margin: 25px 0;
+}
+
+.ex-details > input {
+    margin: 0 15px 0 5px;
+}
+
+.new-workout-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new-workout-title > span > h1 {
+    display: inline;
+    margin-right: 25px;
+    color: #e7853c;
+}
+
+.new-workout-exercise > span > h3 {
+    display: inline;
+}
+
+.new-workout-title > button {
+    background-color: rgba(255, 0, 0, 0.7);
+    border-radius: 5px;
+    color: white;
+}
+
+.new-workout-exercise {
+    border: 1px solid white;
+    padding: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
