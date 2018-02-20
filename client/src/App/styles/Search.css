@@ -20,32 +20,35 @@
 .search {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "side w";
+    grid-template-areas: "side w";
     height: 100%;
-    
 }
 
 .sidebar {
     grid-area: side;
+    /* height: 100vh; */
     background-color: #373944;
     border-right: 10px solid #E7853C;
     border-top: 1px solid #e7853c;
     color: white;
-    height: 100vh;
     padding: 25px;
+    /* display: grid; */
+    /* grid-template-rows: .25fr .55fr .20fr; */
+    /* grid-template-areas: "s" "e" "b"; */
 }
 
-.search-form {
+/* .search-form {
     grid-area: s;
-}
-.exercise-list {
+} */
+
+/* .exercise-list {
     grid-area: e;
-}
-.sidebar > button {
+} */
+
+.sidebar>button {
     grid-area: b;
 }
+
 .new-workout {
     grid-area: w;
 }
@@ -61,12 +64,12 @@
 
 .create-backdrop-style {
     position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0,0,0,0.3);
-      padding: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px;
 }
 
 .create-modal {
@@ -76,4 +79,6 @@
     min-height: 300px;
     margin: 0 auto;
     padding: 30px;
-  };
+}
+
+;
