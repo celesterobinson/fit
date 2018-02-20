@@ -1,5 +1,4 @@
 import axios from 'axios';
-// let exerciseAxios = axios.create();
 
 axios.interceptors.request.use((config)=>{
     const token = localStorage.getItem("token");
@@ -16,7 +15,6 @@ export const getExercise = () => {
         axios.get(exerciseUrl)
             .then(response => {
                 let { data } = response;
-                // console.log(data)
                 dispatch({
                     type: 'GET_EXERCISE',
                     data
@@ -77,8 +75,6 @@ export const populateFilter = (search) => {
         })
     }
 }
-//populateFilter function
-//this is an action creator that dispatches the inputs object from the search form component
 
 const exerciseReducer = (prevState = { loading: true, data: [], filter: { name: "", category: "All" } }, action) => {
     switch (action.type) {

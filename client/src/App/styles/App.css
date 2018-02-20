@@ -3,16 +3,11 @@
     box-sizing: border-box;
 }
 
-html, body {
-    /* height: 100vh; */
-    /* overflow: hidden; */
-}
-
 .app-wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .15fr .8fr .05fr ;
+    grid-template-rows: .1fr .85fr .05fr ;
     grid-template-areas: 
         "n"
         "m"

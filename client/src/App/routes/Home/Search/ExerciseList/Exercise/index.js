@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from "react-bootstrap";
+import { connect } from "react-redux";
+import { addExToWorkout } from "../../../../../redux/workouts";
 import "../../../../../styles/Exercise.css";
 
 class Exercise extends Component {
@@ -9,12 +11,18 @@ class Exercise extends Component {
             showDetails: false
         }
         this.toggleDetails = this.toggleDetails.bind(this);
+        this.newExercise = this.newExercise.bind(this);
     }
 
     toggleDetails() {
         this.setState({
             showDetails: !this.state.showDetails
         })
+    }
+
+    newExercise() {      
+        console.log(this.props);
+        this.props.addExToWorkout(this.props._id);
     }
 
     render() {
@@ -52,11 +60,11 @@ class Exercise extends Component {
                 </div>
                 <div className="exercise-buttons">
                     <button onClick={this.toggleDetails}>Details</button>
-                    <button>Add</button>
+                    <button onClick={this.newExercise}>Add</button>
                 </div>
             </div>
         )
     }
 }
 
-export default Exercise;
+export default connect(null, { addExToWorkout })(Exercise);

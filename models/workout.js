@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const WorkoutModel = new Schema({
     name: String,
-    type: String,
     exercises: [{
         reps: Number,
         sets: Number,

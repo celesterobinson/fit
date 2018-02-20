@@ -13,6 +13,7 @@ workoutRoute.get("/", (req, res) => {
 //POST
 workoutRoute.post("/", (req, res) => {
     const newWorkout = new Workout(req.body);
+    newWorkout.user = req.user._id;
     newWorkout.save((err, savedWorkout) => {
         if (err) return res.status(500).send(err);
         return res.send(savedWorkout);

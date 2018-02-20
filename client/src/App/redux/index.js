@@ -1,11 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import exercises from "./exercises";
+import workouts from "./workouts";
 import user from "./auth";
 
 const rootReducer = (
     combineReducers({
         exercises,
+        workouts,
         user
     })
 );

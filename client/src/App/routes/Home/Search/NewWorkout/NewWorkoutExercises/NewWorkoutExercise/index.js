@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { removeExercise, updateExercise } from "../../../../../../redux/workouts";
+
+class NewWorkoutExercise extends Component {
+
+    render() {
+        let { exerciseId, data, removeExercise, updateExercise, reps, sets, weight } = this.props;
+        const currentEx = data.filter(exercise => exercise._id === exerciseId)[0];
+        console.log(this.props);
+        return (
+            <div>
+                <h1>{currentEx.name}</h1>
+                <h3>{currentEx.category}</h3>
+                <div className="ex-details">
+                    <input onChange={(e) => { let { name, value } = e.target; updateExercise(exerciseId, name, value) }} name="sets" value={sets} type="number" placeholder="Sets" />
+                    <input onChange={(e) => { let { name, value } = e.target; updateExercise(exerciseId, name, value) }} name="reps" value={reps} type="number" placeholder="Reps" />
+                    <input onChange={(e) => { let { name, value } = e.target; updateExercise(exerciseId, name, value) }} name="weight" value={weight} type="number" placeholder="Weight" />
+                </div>
+                <button onClick={(e) => { e.preventDefault(); removeExercise(exerciseId) }}>X</button>
+            </div>
+        )
+    }
+}
+
+export default connect(state => state.exercises, { updateExercise, removeExercise })(NewWorkoutExercise);
