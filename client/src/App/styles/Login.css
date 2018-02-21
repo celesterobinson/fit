@@ -1,0 +1,30 @@
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+.login-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    flex-direction: column;    
+    width: 200px;
+    border: 5px solid #e7853c;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #373944;
+}
+
+.login-form > input, .login-form > button {
+    font-family: 'Encode Sans Expanded', sans-serif;    
+    margin: 10px auto;
+}
+
+.login-form > h1 {
+    margin: 5px auto;
+    font-family: 'Exo', sans-serif;
+    color: white;
+}

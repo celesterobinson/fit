@@ -1,0 +1,33 @@
+.signup-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    flex-direction: column;
+    width: 200px;
+    border: 5px solid #e7853c;
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+    /* top: -100px; */
+    background-color: #373944;
+}
+
+.signup-form > input, .signup-form > button {
+    font-family: 'Encode Sans Expanded', sans-serif;    
+    margin: 10px auto;
+}
+
+.signup-form > h1 {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    margin: 5px auto;
+}

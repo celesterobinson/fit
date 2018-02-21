@@ -1,0 +1,87 @@
+.new-workout-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.new-workout {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 80%;
+    height: 600px;
+    font-family: 'Exo', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* justify-content: center; */
+    border-radius: 10px;    
+    padding: 25px;
+    overflow: scroll;
+}
+
+.workout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    overflow: scroll;
+}
+.workout-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 90%; */
+    height: auto;
+    justify-content: space-between;
+}
+.input {
+    /* width: 50%; */
+    height: 40px;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.workout-button {
+    margin: 25px 0;
+}
+
+.new-workout-exercise-list {
+    margin: 25px 0;
+}
+
+.ex-details > input {
+    margin: 0 15px 0 5px;
+}
+
+.new-workout-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new-workout-title > span > h1 {
+    display: inline;
+    margin-right: 25px;
+    color: #e7853c;
+}
+
+.new-workout-exercise > span > h3 {
+    display: inline;
+}
+
+.new-workout-title > button {
+    background-color: rgba(255, 0, 0, 0.7);
+    border-radius: 5px;
+    color: white;
+}
+
+.new-workout-exercise {
+    border: 1px solid white;
+    padding: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}

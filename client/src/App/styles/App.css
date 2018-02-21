@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app-wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr 1fr .05fr ;
+    grid-template-areas: 
+        "n"
+        "m"
+        "f"
+}
+.background {
+    /* grid-area: m; */
+    height: 100%;
+    z-index: 1;
+    background: url("./images/deadlift.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.nav {
+    grid-area: n;
+}
+
+.main {
+    
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    grid-area: m;
+    height: 100%;
+    z-index: 2;
+}
+
+.footer {
+    grid-area: f;
+    height: 100%;
+    /* width: 100%; */
+    background-color: #e7853c;
+    color: #373944;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo', sans-serif;
+    /* position: fixed;
+    bottom: 0; */
+}

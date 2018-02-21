@@ -1,0 +1,40 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2% 0 13%;
+    align-items: center;
+    background-color: #373944;
+    color: #e7853c;
+}
+
+.nav-link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo', sans-serif;
+}
+
+.links > a {
+    color: #e7853c;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 1s;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.links > a:hover {
+    color: white;
+}
+
+.nav-link-wrapper > div > button {
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 15px;
+}
