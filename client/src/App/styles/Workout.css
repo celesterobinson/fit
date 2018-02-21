@@ -1,0 +1,42 @@
+.individual-workout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 60%;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+.individual-workout > h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+
+.workout-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Encode Sans Expanded', sans-serif; 
+}
+
+.workout-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.workout-page > h2 {
+    font-family: 'Exo', sans-serif;
+    margin: 25px 0;
+    color: white;
+}

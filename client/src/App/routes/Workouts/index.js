@@ -1,16 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
+import WorkoutList from "./WorkoutList";
+import { getWorkouts } from "../../redux/workouts";
+import "../../styles/Workout.css";
 
-function Workouts(props) {
-    return (
-        <div>
-            <h2>Welcome, <i>@{props.username}</i></h2>
-        </div>
-    )
+class Workouts extends Component {
+    componentDidMount() {
+        this.props.getWorkouts();
+    }
+
+    render() {
+        return (
+            <div className="workout-page">
+                <h2>Welcome, {this.props.user.username}! Checkout your workouts below.</h2>
+                <WorkoutList workouts={this.props.workouts.data}/>
+            </div>
+        )
+    }
 }
 
-const mapStateToProps = (state) => {
-    return state.user;
-}
-
-export default connect(mapStateToProps, {})(Workouts);
+export default connect(state => state, { getWorkouts })(Workouts);
