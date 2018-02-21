@@ -18,6 +18,7 @@ class App extends Component {
         return (
             <div className="app-wrapper">
                 <Navbar />
+                <div className="background">
                 <div className="main">
                     <Switch>
                         <Route exact path="/" render={(props) => {
@@ -33,6 +34,7 @@ class App extends Component {
                         <ProtectedRoute path="/workouts" component={Workouts} />
                         <ProtectedRoute path="/home" component={Home} />
                     </Switch>
+                </div>
                 </div>
                 <Footer />
             </div>

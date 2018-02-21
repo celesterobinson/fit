@@ -36,11 +36,13 @@ class NewWorkout extends Component {
         let { name } = this.state.inputs;
         return (
             <div className="new-workout" >
-                <form>
-                    <input onChange={this.handleChange} value={name} type="text" placeholder="New Workout Name" />
+                <div className="workout-input">
+                    <input className="input" onChange={this.handleChange} value={name} type="text" placeholder="New Workout Name" />
+                </div>
+                <form className="workout-form">
                     <NewWorkoutExercises className="new-workout-exercise-list" exercises={this.props.workouts.currentWorkout.exercises} />
-                    <button onClick={this.handleSubmit}>Save Workout</button>
                 </form>
+                    <button className="workout-button" onClick={this.handleSubmit}>Save Workout</button>
             </div>
         )
     }

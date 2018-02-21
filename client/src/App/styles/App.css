@@ -7,28 +7,31 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .1fr .85fr .05fr ;
+    grid-template-rows: .1fr 1fr .05fr ;
     grid-template-areas: 
         "n"
         "m"
         "f"
 }
-
-.nav {
-    /* height: 300px; */
-    grid-area: n;
-}
-
-.main {
-    grid-area: m;
-    height: 100%;
-}
-
 .background {
+    /* grid-area: m; */
+    height: 100%;
+    z-index: 1;
     background: url("./images/deadlift.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+.nav {
+    grid-area: n;
+}
+
+.main {
+    
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    grid-area: m;
+    height: 100%;
+    z-index: 2;
 }
 
 .footer {

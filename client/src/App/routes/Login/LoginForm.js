@@ -46,7 +46,7 @@ class LoginForm extends Component {
     render() {
         let { username, password } = this.state.inputs;
         return (
-            <div className="background">
+            
                 <div className="login-form-wrapper">
                     <form onSubmit={this.handleSubmit} className="login-form">
                         <h1>Login</h1>
@@ -54,7 +54,7 @@ class LoginForm extends Component {
                         <input onChange={this.handleChange} name="password" value={password} placeholder="password" type="password" />
                         <button>Submit</button>
                     </form>
-                </div>
+                
             </div>
         )
     }
