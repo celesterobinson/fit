@@ -27,7 +27,7 @@
 @media(max-width: 1064px) {
     .search {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas:
             "s"
             "w";
@@ -50,10 +50,19 @@
 .sidebar > button {
     grid-area: b;
     width: 75%;
+    font-family: 'Encode Sans Expanded', sans-serif;
+
 }
 
 .new-workout {
     grid-area: w;
+    margin: 20px 0;
+
+}
+
+.new-workout > button {
+    font-family: 'Encode Sans Expanded', sans-serif;
+
 }
 
 .new-workout-layer {
@@ -66,12 +75,6 @@
 }
 
 @media(max-width: 1064px) {
-    .background {
-        background: none!important;
-    }
-    .new-workout-layer {
-        background-color: #373944;
-    }
     .sidebar {
         border-right: none;
     }
