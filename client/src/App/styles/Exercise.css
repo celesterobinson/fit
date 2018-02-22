@@ -9,7 +9,7 @@
     color: #373944;
 }
 
-.exercise > button {
+.exercise>button {
     height: 20px;
 }
 
@@ -20,20 +20,25 @@
 
 .backdrop-style {
     position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0,0,0,0.3);
-      padding: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px;
 }
 
 .details-modal {
     background-color: #fff;
     border-radius: 5px;
     max-width: 500px;
-    max-height:700px;
+    max-height: 600px;
     margin: 0 auto;
     padding: 30px;
     overflow: scroll;
-  };
+}
+@media(max-width: 400px) {
+    .details-modal {
+        max-width: 100%;
+    }
+}
