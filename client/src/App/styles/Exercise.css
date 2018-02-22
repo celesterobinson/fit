@@ -32,7 +32,8 @@
     background-color: #fff;
     border-radius: 5px;
     max-width: 500px;
-    min-height: 300px;
+    max-height:700px;
     margin: 0 auto;
     padding: 30px;
+    overflow: scroll;
   };

@@ -68,6 +68,18 @@ export const getWorkouts = () => {
     }
 }
 
+export const deleteWorkout = (id) => {
+    return dispatch => {
+        axios.delete(workoutUrl + id, id)
+            .then(response => {
+                dispatch({
+                    type: 'DELETE_WORKOUT',
+                    id
+                })
+            })
+    }
+}
+
 const workoutReducer = (workouts = { loading: true, data: [], currentWorkout: { name: "", exercises: [] } }, action) => {
     switch (action.type) {
         case "ADD_EX_TO_WORKOUT":
@@ -116,6 +128,13 @@ const workoutReducer = (workouts = { loading: true, data: [], currentWorkout: { 
                 ...workouts,
                 loading: false,
                 data: action.data
+            }
+        case "DELETE_WORKOUT":
+            return {
+                loading: false,
+                data: workouts.data.filter((workout) => {
+                    return workout._id !== action.id
+                })
             }
         default:
             return workouts;

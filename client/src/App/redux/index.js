@@ -19,7 +19,7 @@ let store = createStore(
 );
 
 const token = localStorage.token;
-const userInfo = JSON.parse(localStorage.user);
+const userInfo = JSON.parse(localStorage.getItem("user"));
 if (userInfo && token) {
     store.dispatch({
         type: "AUTHENTICATE", user: userInfo

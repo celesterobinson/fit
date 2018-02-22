@@ -4,19 +4,26 @@
     justify-content: center;
     height: 100px;
     width: 60%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     margin: 20px 0;
     border-radius: 5px;
     padding: 10px;
-    
+    transition: background-color 1s, color 1s, box-shadow 1s;
+}
+
+.individual-workout:hover {
+    background-color: rgba(225, 225, 225, 0.5);
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 8px 6px -6px #e7853c;
 }
 
 .individual-workout > h1 {
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
+    color: white;
 }
-
 
 .workout-list {
     display: flex;
@@ -24,7 +31,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-family: 'Encode Sans Expanded', sans-serif; 
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
 
 .workout-page {
@@ -32,11 +39,23 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.3);
+    height: 100%;
 }
 
 .workout-page > h2 {
     font-family: 'Exo', sans-serif;
     margin: 25px 0;
     color: white;
+}
+
+.workout-exercise {
+    margin-bottom: 20px;
+}
+.workout-exercise > h1 {
+    color: #e7853c
+}
+
+.details-modal {
+    font-family: 'Encode Sans Expanded', sans-serif;    
 }

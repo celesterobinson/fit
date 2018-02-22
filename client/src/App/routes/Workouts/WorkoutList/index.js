@@ -3,14 +3,10 @@ import Workout from "./Workout";
 import { connect } from "react-redux";
 
 function WorkoutList(props) {
-    let { workouts} = props;
-    const workoutList = workouts
-        .filter(workouts => workouts.user === props._id)
-        .map((workout, id) => {
-        return <Workout key={id}{...workout} />
-    })
-    console.log(workoutList[0]);
-    // const workoutExercises = workoutList.filter(exercises => exer)
+    let { workouts } = props;
+    const workoutList = workouts.map((workout, id) => {
+            return <Workout key={id}{...workout} />
+        })
     return (
         <div className="workout-list">
             {workoutList}

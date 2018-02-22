@@ -21,7 +21,6 @@ class Exercise extends Component {
     }
 
     newExercise() {      
-        console.log(this.props);
         this.props.addExToWorkout(this.props._id);
     }
 
