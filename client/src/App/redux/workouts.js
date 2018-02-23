@@ -127,10 +127,11 @@ const workoutReducer = (workouts = { loading: true, data: [], currentWorkout: { 
             return {
                 ...workouts,
                 loading: false,
-                data: action.data
+                data: action.data,
             }
         case "DELETE_WORKOUT":
             return {
+                ...workouts,
                 loading: false,
                 data: workouts.data.filter((workout) => {
                     return workout._id !== action.id
