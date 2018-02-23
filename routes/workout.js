@@ -4,7 +4,7 @@ const Workout = require("../models/workout");
 
 //GET
 workoutRoute.get("/", (req, res) => {
-    Workout.find((err, workouts) => {
+    Workout.find({ user: req.user._id }, (err, workouts) => {
         if (err) return res.status(500).send(err);
         return res.send(workouts);
     });

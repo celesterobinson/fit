@@ -14,12 +14,14 @@ class NewWorkout extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.clearInputs = this.clearInputs.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         console.log(this.state.inputs.name)
         this.props.saveWorkout({ ...this.props.workouts.currentWorkout, name: this.state.inputs.name });
+        this.clearInputs();
     }
 
     handleChange(e) {
@@ -27,6 +29,14 @@ class NewWorkout extends Component {
         this.setState({
             inputs: {
                 name: value
+            }
+        })
+    }
+
+    clearInputs() {
+        this.setState({
+            inputs: {
+                name: ""
             }
         })
     }

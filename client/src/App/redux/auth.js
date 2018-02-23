@@ -5,7 +5,6 @@ export function signup(credentials) {
         axios.post("/auth/signup", credentials)
             .then(response => {
                 const { token, user } = response.data;
-                console.log(response.data);
                 localStorage.token = token;
                 localStorage.user = JSON.stringify(user);
                 dispatch(
@@ -24,7 +23,6 @@ export function login(credentials) {
             .then(response => {
                 const { token, user } = response.data;
                 localStorage.token = token;
-                console.log(localStorage.token);
                 localStorage.user = JSON.stringify(user);
                 dispatch(authenticate(user));
             })

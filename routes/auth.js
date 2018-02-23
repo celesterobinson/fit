@@ -37,13 +37,13 @@ authRouter.post("/login", (req, res) => {
         if (!user || user.password !== req.body.password) {
             return res.status(403).send({
                 success: false,
-                message: "Email or passward are incorrect"
+                message: "Email or password are incorrect"
             })
         }
         const token = jwt.sign(user.toObject(), process.env.SECRET, { expiresIn: "24h" });
         return res.status(200).send({
             token: token,
-            user: user,
+            user: user.toObject(),
             sucess: true,
             message: "Here's your token!"
         })

@@ -1,4 +1,14 @@
 import axios from "axios";
+const workoutUrl = `/api/workout/`;
+
+axios.interceptors.request.use((config)=>{
+    const token = localStorage.getItem("token");
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+})
+
 export const addExToWorkout = id => {
     return dispatch => {
         dispatch({
@@ -18,7 +28,6 @@ export const removeExercise = id => {
 }
 
 export const updateExercise = (id, name, value) => {
-    console.log(value);
     return dispatch => {
         dispatch({
             type: "UPDATE_EXERCISE",
@@ -29,18 +38,43 @@ export const updateExercise = (id, name, value) => {
     }
 }
 
-const workoutUrl = `/api/workout/`;
 
 export const saveWorkout = (workout) => {
-    console.log(workout);    
     return dispatch => {
         axios.post(workoutUrl, workout)
             .then(response => {
-                console.log(response);
                 let { data } = response;
                 dispatch({
                     type: "SAVE_WORKOUT",
                     data
+                })
+            })
+    }
+}
+
+export const getWorkouts = () => {
+    return dispatch => {
+        axios.get(workoutUrl)
+            .then(response => {
+                let { data } = response;
+                dispatch({
+                    type: "GET_WORKOUTS",
+                    data
+                })
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
+
+export const deleteWorkout = (id) => {
+    return dispatch => {
+        axios.delete(workoutUrl + id, id)
+            .then(response => {
+                dispatch({
+                    type: 'DELETE_WORKOUT',
+                    id
                 })
             })
     }
@@ -61,7 +95,7 @@ const workoutReducer = (workouts = { loading: true, data: [], currentWorkout: { 
             return {
                 ...workouts,
                 currentWorkout: {
-                    ...workouts.currentWorkout,                    
+                    ...workouts.currentWorkout,
                     exercises: workouts.currentWorkout.exercises.filter(ex => ex.exerciseId !== action.id)
                 }
             }
@@ -88,6 +122,19 @@ const workoutReducer = (workouts = { loading: true, data: [], currentWorkout: { 
                 loading: false,
                 data: [...workouts.data, action.data],
                 currentWorkout: { name: "", exercises: [] }
+            }
+        case "GET_WORKOUTS":
+            return {
+                ...workouts,
+                loading: false,
+                data: action.data
+            }
+        case "DELETE_WORKOUT":
+            return {
+                loading: false,
+                data: workouts.data.filter((workout) => {
+                    return workout._id !== action.id
+                })
             }
         default:
             return workouts;

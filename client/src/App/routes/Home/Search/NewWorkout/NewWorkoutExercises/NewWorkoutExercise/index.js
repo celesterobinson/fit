@@ -7,7 +7,6 @@ class NewWorkoutExercise extends Component {
     render() {
         let { exerciseId, data, removeExercise, updateExercise, reps, sets, weight } = this.props;
         const currentEx = data.filter(exercise => exercise._id === exerciseId)[0];
-        console.log(this.props);
         return (
             <div className="new-workout-exercise">
                 <div className="new-workout-title">

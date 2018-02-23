@@ -19,7 +19,7 @@ let store = createStore(
 );
 
 const token = localStorage.token;
-const userInfo = localStorage.user;
+const userInfo = JSON.parse(localStorage.getItem("user"));
 if (userInfo && token) {
     store.dispatch({
         type: "AUTHENTICATE", user: userInfo
@@ -27,7 +27,7 @@ if (userInfo && token) {
 }
 
 store.subscribe(() => {
-    // console.log(store.getState());
+    console.log(store.getState());
 })
 
 export default store;
