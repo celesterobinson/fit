@@ -22,7 +22,7 @@ Create a fitness app that allows users to choose exercises from the database, or
 
 Login Mobile View | Workout Creator Mobile View | Workout List Mobile View | Workout Mobile View
 --- | --- | --- | ---
-<img alt="login-mobile-view" src="screenshots/login-page-mobile-view.png" width="300" height="auto"><img alt="workout-creator-mobile-view" src="screenshots/workout-creator-mobile-view.png" width="300" height="auto"><img alt="workout-list-mobile-view" src="screenshots/workout-list-mobile-view.png" width="300" height="auto"><img alt="workout-mobile-view" src="screenshots/workout-mobile-view.png" width="300" height="auto">
+<img alt="login-mobile-view" src="screenshots/login-page-mobile-view.png" width="300" height="auto"> | <img alt="workout-creator-mobile-view" src="screenshots/workout-creator-mobile-view.png" width="300" height="auto"> | <img alt="workout-list-mobile-view" src="screenshots/workout-list-mobile-view.png" width="300" height="auto"> | <img alt="workout-mobile-view" src="screenshots/workout-mobile-view.png" width="300" height="auto">
 ## Links
 
 Github Repository: https://github.com/celesterobinson/fit
