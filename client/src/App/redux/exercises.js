@@ -114,8 +114,6 @@ const exerciseReducer = (prevState = { loading: true, data: [], filter: { name: 
                 ...prevState,
                 filter: action.search
             }
-        // handle a populate filter case
-        // return a new state containing the filter object sent from the action
         default:
             return prevState
     }
