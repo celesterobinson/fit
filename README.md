@@ -2,7 +2,6 @@
 
 Celeste Robinson & Luke Barrett
 
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&amp;showinfo=0" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no"></iframe>
 ## Objective
 
 Create a fitness app that allows users to choose exercises from the database, or create their own. They can then add these exercises to a workout, and save the workout. Project should use token authentication to ensure saved workouts only pertain to the signed in user.
