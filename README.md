@@ -31,10 +31,6 @@ Github Repository: https://github.com/celesterobinson/fit
 * HTML, CSS, JavaScript, React/Redux + Thunk, Axios
 * Node, Express + Middleware, MongoDB, Mongoose, JWT
 
-## Code Example
-
-## Wireframes
-
 ## Future Ideas
 * Be able to log a workout while doing it, and save each day's lifts.
 
@@ -43,6 +39,3 @@ Github Repository: https://github.com/celesterobinson/fit
 * Have a personal profile for measurments and weight
 
 * Have a basic food log, or inegrate with MFP
-
-# fit
-# fit
